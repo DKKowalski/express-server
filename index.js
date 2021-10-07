@@ -1,47 +1,10 @@
 const express = require("express");
 const app = express();
 
-const products = [
-  {
-    id: 1,
-    name: "iPhone 14",
-    category: "Smart phones",
-    currency: "$",
-    price: 2000,
-    stars: "⭐⭐⭐⭐⭐",
-    image: "",
-    review: "good product!",
-  },
-  {
-    id: 2,
-    name: "Waakye",
-    category: "food",
-    currency: "$",
-    price: 2000,
-    stars: "⭐⭐⭐⭐⭐",
-    image: "",
-    review: "good product!",
-  },
-];
-
-const customers = [
-  {
-    id: 1,
-    name: "KD Emmanuel",
-    gender: "male",
-  },
-  {
-    id: 2,
-    name: "Kwabs Asante-Ansah",
-    gender: "female",
-  },
-  {
-    id: 3,
-    name: "Mark Atta-Mensah",
-    gender: "male",
-  },
-];
-
+app.post("/product", (req, res) => {
+  console.log(req.body);
+  res.send("data received successfully!!");
+});
 app.get("/", (req, res) => {
   res.json({ message: "Hello world" });
 });
